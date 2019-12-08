@@ -4,7 +4,7 @@
   "description": "Social network for book lovers.",
   "main": "server.js",
   "scripts": {
-    "start": "babel-node server.js",
+    "start": "npm run server",
     "server": "nodemon --exec babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,9 @@
   "devDependencies": {
     "@babel/core": "^7.7.4",
     "@babel/node": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
+    "babel-eslint": "^10.0.3",
     "concurrently": "^5.0.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
