@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
 
-import Matchup from './components/matchup';
+import Layout from './components/layout';
+import Showcase from './components/showcase';
 import Teams from './components/teams';
 
 /**
@@ -10,11 +10,10 @@ import Teams from './components/teams';
 const App = () => {
   const [tier, setTier] = useState(0);
   return (
-    <div className="App">
-      <h1>2K Matchups</h1>
-      <Matchup tier={tier} />
+    <Layout>
+      <Showcase tier={tier} />
       <Teams tier={tier} setTier={setTier} />
-    </div>
+    </Layout>
   );
 };
 
