@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 import Matchup from './components/matchup';
 import Teams from './components/teams';
 
+/**
+ * Main app component
+ */
 const App = () => {
   const [tier, setTier] = useState(0);
   return (

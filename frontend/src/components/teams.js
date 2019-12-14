@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 import { TEAMS } from '../data/teams';
 
+/**
+ * Teams component to display all teams in a tier
+ *
+ * @param {props} contains tier and setTier
+ */
 const Teams = ({ tier, setTier }) => {
   const [teams, setTeams] = useState(TEAMS[tier]);
   const TIERS = ['Broken', 'Top', 'Mid', 'Scrubs'];

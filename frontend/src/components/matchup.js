@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import generateMatchup from '../utils/matchup';
 
-const CurrentMatchup = ({ tier }) => {
+/**
+ * React component displaying the current matchup
+ *
+ * @param {tier} index to represent whether the current tier is broken, top, middle, or scrub
+ */
+const Matchup = ({ tier }) => {
   const [matchup, setMatchup] = useState(['', '']);
   const [team1, team2] = matchup;
 
   const handleClick = () => {
     setMatchup(generateMatchup(tier));
   };
+
+  useEffect(() => {
+    setMatchup(['', '']);
+  }, [tier]);
 
   return (
     <>
@@ -22,4 +31,4 @@ const CurrentMatchup = ({ tier }) => {
   );
 };
 
-export default CurrentMatchup;
+export default Matchup;
