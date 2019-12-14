@@ -11,7 +11,7 @@ const App = () => {
   const [tier, setTier] = useState(0);
   return (
     <Layout>
-      <Showcase tier={tier} />
+      <Showcase tier={tier} setTier={setTier} />
       <Teams tier={tier} setTier={setTier} />
     </Layout>
   );

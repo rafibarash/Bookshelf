@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { Box, Typography } from '@material-ui/core';
+import Tier from './tier';
 import { TEAMS } from '../data/teams';
 
 /**
@@ -18,22 +19,17 @@ const Teams = ({ tier, setTier }) => {
   };
 
   return (
-    <>
-      <select name="tierNames" onChange={e => handleTierChange(e)}>
-        {TIERS.map((tier_name, i) => (
-          <option value={i} key={tier_name}>
-            {tier_name}
-          </option>
-        ))}
-      </select>
-      <p>tier: {tier}</p>
-      <h3>Teams</h3>
+    <Box>
+      <Tier tier={tier} setTier={setTier} />
+      <Typography variant="h5" component="h3">
+        Teams
+      </Typography>
       <ul>
         {teams.map(team => (
           <li key={team}>{team}</li>
         ))}
       </ul>
-    </>
+    </Box>
   );
 };
 
