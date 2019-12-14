@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run server",
     "server": "nodemon --exec babel-node server.js",
+    "frontend": "cd frontend && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rafael Barash",
